@@ -89,7 +89,7 @@ pipeline {
                 echo '### tag image for namespace ###'
                 sh  '''
                     docker stop home-view
-                    docker run -d -t --rm --name home-view -p 8889:8888 home-view
+                    docker run -d -t --rm --name home-view -p 9080:8888 home-view
                     '''
             }
         }
