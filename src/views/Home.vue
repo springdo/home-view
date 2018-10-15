@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="md-layout md-gutter">
+    <div class="md-layout-item"> BAR ONE </div>
+    <div class="md-layout-item"> BAR TWO</div>
   </div>
 </template>
 

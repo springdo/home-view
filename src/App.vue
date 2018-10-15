@@ -68,15 +68,13 @@
 
 <style lang="scss" scoped>
   .page-container {
-    overflow: hidden;
-    position: relative;
     border: 1px solid rgba(#000, .12);
   }
 
    // Demo purposes only
   .md-drawer {
     width: 230px;
-    max-width: calc(100vw - 125px);
+    max-width: calc(100vw - 140px);
   }
 
   .md-content {
