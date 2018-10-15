@@ -3,8 +3,10 @@ import router from './router';
 import VueMaterial from 'vue-material';
 import App from './App.vue';
 import store from './store';
+import filters from './filters';
 import 'vue-material/dist/vue-material.min.css';
 import './assets/styles/base-theme.scss';
+import './assets/weather-icons/css/weather-icons.min.css';
 
 import './registerServiceWorker';
 
@@ -12,11 +14,6 @@ import './registerServiceWorker';
 Vue.config.productionTip = false;
 Vue.use(VueMaterial);
 
-// filters
-Vue.filter('capitalize', (value) => {
-  if (!value) return '';
-  return value.charAt(0).toUpperCase() + value.slice(1);
-});
 
 new Vue({
   router,

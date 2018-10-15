@@ -4,7 +4,7 @@
       <md-button class="md-icon-button" @click="showNavigation = true">
         <md-icon>menu</md-icon>
       </md-button>
-      <span class="md-title center-text">Welcome home {{ person }} </span>
+      <span class="md-title center-text"> 👋 Welcome home {{ person }} </span>
     </md-toolbar>
 
     <md-drawer :md-active.sync="showNavigation">
@@ -51,7 +51,7 @@
       </md-list>
     </md-drawer>
 
-    <md-content>
+    <md-content class="fill-height">
       <router-view/>
     </md-content>
   </div>
@@ -81,6 +81,11 @@ export default {
 <style lang="scss" scoped>
 .page-container {
   border: 1px solid rgba(#000, 0.12);
+}
+.fill-height{
+    top: 64px;
+    bottom: 0px;
+    position: absolute;
 }
 
 // Demo purposes only

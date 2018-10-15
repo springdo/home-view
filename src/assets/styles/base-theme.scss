@@ -7,3 +7,9 @@
 ));
 
 @import "~vue-material/dist/theme/all"; // Apply the theme
+
+
+p,body,span,div,h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto';
+  font-size: 22px;
+}

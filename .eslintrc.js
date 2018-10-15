@@ -14,9 +14,11 @@ module.exports = {
     'no-param-reassign': [
       'error',
       {
-        props: true,
+        props: false,
         ignorePropertyModificationsFor: [
           'state',
+          'decimals',
+          'value'
         ],
       },
     ],

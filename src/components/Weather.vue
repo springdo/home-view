@@ -2,33 +2,34 @@
   <div>
     <md-card>
       <md-card-header>
-        <div class="md-title title-color">{{ weather.name }}</div>
+        <div class="title-color md-title">{{ weather.name }}</div>
       </md-card-header>
 
       <md-card-content>
-        <div class="weather-summary"> {{ weather.weather[0].description | capitalize }} </div>
-        DateTime = {{ weather.dt }}
-        temp = {{ weather.main.temp }}
-        pressure =  {{ weather.main.pressure }}
-        weather0 =  {{ weather.weather[0].description }}
-        weather1 =  {{ weather.weather[1].description }}
+        <div class="weather-summary">
+           {{ weather.weather[0].description | capitalize }} and {{ weather.weather[1].description | capitalize }}
+        </div>
+        <span class="weather-icon">
+          <i class="wi wi-owm-741"></i>
+        </span>
+        <span class="weather-temp"> {{ weather.main.temp | round}}°C </span>
+
+    <!-- todo -->
         humidity =  {{ weather.main.humidity }}
         temp_min =  {{ weather.main.temp_min }}
         temp_max =  {{ weather.main.temp_max }}
-        wind =  {{ weather.wind.speed }}
+        wind =  {{ weather.wind.speed }}        
+        
+        <!-- todo footer -->
+        Last Checked at {{ weather.dt | toDate}}
 
         <!-- ALL DATA IS {{ weather }} -->
       </md-card-content>
       <div>
-        DateTime = {{ weather.dt }}
-        temp = {{ weather.main.temp }}
         pressure =  {{ weather.main.pressure }}
         weather0 =  {{ weather.weather[0].description }}
         weather1 =  {{ weather.weather[1].description }}
-        humidity =  {{ weather.main.humidity }}
-        temp_min =  {{ weather.main.temp_min }}
-        temp_max =  {{ weather.main.temp_max }}
-        wind =  {{ weather.wind.speed }}
+
       </div>
     </md-card>
     <md-progress-spinner class="md-accent" md-mode="indeterminate" v-show="loading"></md-progress-spinner>
@@ -46,7 +47,6 @@ export default {
   data: () => ({
     location: 'LONDIN',
   }),
-
   computed: {
     ...mapGetters(['weather', 'loading']),
   },
@@ -65,7 +65,26 @@ export default {
 }
 
 .weather-summary {
+  font-size: 2.2em;
+  letter-spacing: 0;
+  padding: 1.1em 0.1em;
+  color: $font-grey
+}
 
+.weather-icon {
+  margin: 1.7rem 0.2rem;
+  font-size: 10em;
+  color: $font-grey
+
+}
+
+.weather-temp {
+  font-size: 6em;
+  color: $font-grey
+}
+.md-title{
+  font-size: 2.6rem!important;
+  line-height: 3.0rem!important;
 }
 
 .title-color {
