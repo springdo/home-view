@@ -12,6 +12,12 @@ import './registerServiceWorker';
 Vue.config.productionTip = false;
 Vue.use(VueMaterial);
 
+// filters
+Vue.filter('capitalize', (value) => {
+  if (!value) return '';
+  return value.charAt(0).toUpperCase() + value.slice(1);
+});
+
 new Vue({
   router,
   store,
