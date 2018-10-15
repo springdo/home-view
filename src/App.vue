@@ -4,7 +4,7 @@
       <md-button class="md-icon-button" @click="showNavigation = true">
         <md-icon>menu</md-icon>
       </md-button>
-      <span class="md-title">Welcome home {{ person }} </span>
+      <span class="md-title center-text">Welcome home {{ person }} </span>
     </md-toolbar>
 
     <md-drawer :md-active.sync="showNavigation">
@@ -68,7 +68,7 @@ export default {
   data: () => ({
     showNavigation: false,
     showSidepanel: false,
-    person: 'person',
+    person: '{{ person }}',
   }),
   methods: {
     toView: (path) => {

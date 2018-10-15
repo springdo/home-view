@@ -9,9 +9,12 @@ export default new Vuex.Store({
   state: {
     loading: true,
     weather: {},
+    forecast: {},
   },
   getters: {
-    getWeather: state => state.weather,
+    weather: state => state.weather,
+    forecast: state => state.forecast,
+    loading: state => state.loading,
   },
   mutations,
   actions,
