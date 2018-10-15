@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import router from './router';
-import store from './store';
 import VueMaterial from 'vue-material';
 import App from './App.vue';
+import store from './store';
 import 'vue-material/dist/vue-material.min.css';
 import './assets/styles/base-theme.scss';
 
