@@ -47,7 +47,7 @@
           <md-icon>home</md-icon>
           <span class="md-list-item-text">Home</span>
         </md-list-item>
-        
+
       </md-list>
     </md-drawer>
 
@@ -58,23 +58,23 @@
 </template>
 
 <script>
-import Router from './router.js';
+import Router from './router';
 
 export default {
-  name: "Temporary",
+  name: 'Temporary',
   components: {
-    Router
+    Router,
   },
   data: () => ({
     showNavigation: false,
     showSidepanel: false,
-    person: "person"
+    person: 'person',
   }),
   methods: {
     toView: (path) => {
-      Router.push({ path })
-    }
-  }
+      Router.push({ path });
+    },
+  },
 };
 </script>
 

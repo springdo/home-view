@@ -5,7 +5,7 @@ export default {
   loadWeatherData({ commit }) {
     commit('SET_LOADING', true);
     return axios
-      .get(config.apiEndpoint + '/api/weather')
+      .get(`${config.apiEndpoint}/api/weather`)
       .then(r => r.data)
       .then((weather) => {
         commit('SET_WEATHER', weather);
