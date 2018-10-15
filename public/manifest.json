@@ -1,6 +1,6 @@
 {
-  "name": "home-vue2",
-  "short_name": "home-vue2",
+  "name": "home-vue",
+  "short_name": "home-vue",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",

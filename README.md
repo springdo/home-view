@@ -1,4 +1,6 @@
-# home-vue2
+# Home View
+Controll all connected devices with one singe Home Vue. Lovingly built on VueJS with Material-UI
+
 
 ## Project setup
 ```
