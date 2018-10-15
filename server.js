@@ -15,4 +15,6 @@ const FAKE_FORECAST_RESP = '{"cod":"200","message":0.0033,"cnt":40,"list":[{"dt"
 app.get('/api/weather', (req, res) => res.send(JSON.parse(FAKE_WEATHER_RESP)));
 app.get('/api/forecast', (req, res) => res.send(JSON.parse(FAKE_FORECAST_RESP)));
 
+app.use(express.static('/usr/src/app'));
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
